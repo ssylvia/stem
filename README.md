@@ -4,7 +4,7 @@ This storytelling template enables users to place multiple webmaps into an applc
 
 [View live app here](http://esri.github.io/side-accordion-map-storytelling-template-js)
 
-![App](https://raw.github.com/Esri/side-accordion-map-storytelling-template-js/master/resources/github/images/screenshot.png)
+![App](https://raw.github.com/Esri/side-accordion-map-storytelling-template-js/master/resources/github/screenshot.png)
 
 ## Features
 * Supports multiple webmaps with a side accordion.
@@ -43,7 +43,7 @@ You can personalize your site by adding a custom logo to the application's heade
 
 1. First copy your custom logo to the images subdirectory.
 2. Open layout.css in a text editor.
-3. Find the section of code that has an id of "logoArea" and add the following attribute.
+3. Find the section of code that has an id of "logo" and add the following attribute.
 
         background:url(../images/yourImage.png) top left no-repeat;
 
