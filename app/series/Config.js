@@ -16,8 +16,6 @@ define([],
 			subtitle: "",
 			//Sync maps scale and location
 			syncMaps: false,
-			//If the webmap uses Bing Maps data, you will need to provided your Bing Maps Key
-			bingmapskey: "Akt3ZoeZ089qyG3zWQZSWpwV3r864AHStal7Aon21-Fyxwq_KdydAH32LTwhieA8",
 			// Specify a proxy for custom deployment
 			proxyurl: "",
 			//specify the url to a geometry service
