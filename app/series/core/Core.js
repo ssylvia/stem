@@ -42,7 +42,7 @@ define(["esri/map",
 			}
 
 			if (!configOptions.sharingurl) {
-				if(location.host.match("localhost") || location.host.match("storymaps.esri.com") || location.host.match("c9.io"))
+				if(location.host.match("localhost") || location.host.match("storymaps.esri.com") || location.host.match("esri.github.io"))
 					configOptions.sharingurl = "http://www.arcgis.com/sharing/rest/content/items";
 				else
 					configOptions.sharingurl = location.protocol + '//' + location.host + "/sharing/content/items";
