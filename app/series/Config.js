@@ -21,7 +21,7 @@ define([],
 			//specify the url to a geometry service
 			geometryserviceurl: "http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
 			//Modify this to point to your sharing service URL if you are using the portal
-			sharingurl: ""
+			sharingurl: "http://www.arcgis.com/sharing/rest/content/items"
 		}
 	}
 );
