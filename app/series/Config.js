@@ -3,7 +3,7 @@ define([],
 	{
 		configOptions = {
 			//The appid for the configured application
-			appid: "14db98e4960140b190f4b4e2c7e653c4",
+			appid: "",
 			//The web map id
 			webmaps: [
 			{
