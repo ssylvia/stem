@@ -84,6 +84,13 @@
 	z-index: 1;
 }
 
+.simpleGeocoder{
+	position: absolute;
+	top: 20px;
+	left: 71px;
+	z-index: 30;
+}
+
 b{
 	font-weight: bold;
 }

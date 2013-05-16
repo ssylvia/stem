@@ -219,6 +219,14 @@ define(["esri/map",
 				map.setExtent(map._mapParams.extent);
 			});
 
+			if(configOptions.geocoderWidget){
+				$("#" + map.container.id).append('<div id="'+map.container.id+'geocoder" class="geocoderWidget"></div>');
+				var geocoder = new esri.dijit.Geocoder({
+					map: map
+				},map.container.id+'geocoder');
+				geocoder.startup();
+			}
+
 			//ADD LEGEND
 			if(layers.length > 0){
 				var legend = new esri.dijit.Legend({

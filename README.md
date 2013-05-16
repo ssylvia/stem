@@ -31,10 +31,12 @@ Now let's configure the application to use a different ArcGIS Online group, titl
 
 1. Every map on ArcGIS Online has a unique identifier. To find the map id, navigate to [ArcGIS Online](http://www.arcgis.com), and find the map you want to display. If it is one of your maps, make sure it's shared with everyone (public). View the map details and copy the ID from the URL in the top of your browser. The section you need to copy is bolded in the following URL: arcgis.com/home/webmap/viewer.html?webmap= **5ae9e138a17842688b0b79283a4353f6**.
 2. Navigate to the "app/series/Config.js" file in a text editor. You can edit this file to set the following application properties:
+	- **appId**: Can be used to configure the application through ArcGIS.com. Requires the application to be installed as a new application in your organization's template gallery. Leave blank if using the configuration properties below.
     - **webmaps**: unique identifier for the ArcGIS Online maps.
     - **title**: if not specified the ArcGIS.com map's title is used.
     - **subtitle**: if not specified the ArcGIS.com webmap's summary is used.
     - **syncMaps**: choose if multiple maps are synced across scale and location.
+    - **geocoderWidget**: display a geocoder widget on the map.
 3. Save the file then test your application and note that it now displays your application and if specified your custom title and subtitle.
 
 #### Personalize the application

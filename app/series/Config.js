@@ -7,15 +7,17 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-				id: "739db23c3f674005a405c68e337f5011",
-				title: "Federal funding for STEM education"
+				id: "3e823422bed64c1e8513000fa4ad0362",
+				title: ""
 			}],
 			//Enter a title, if no title is specified, the webmap's title is used.
-			title: "",
+			title: "Add a title here",
 			//Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
-			subtitle: "",
+			subtitle: "Add a subtitle here",
 			//Sync maps scale and location
-			syncMaps: false,
+			syncMaps: true,
+			//Display geocoder search widget
+			geocoderWidget: false,
 			// Specify a proxy for custom deployment
 			proxyurl: "",
 			//specify the url to a geometry service
