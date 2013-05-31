@@ -22,6 +22,8 @@ define([],
 			proxyurl: "",
 			//specify the url to a geometry service
 			geometryserviceurl: "http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
+			//If the webmap uses Bing Maps data, you will need to provided your Bing Maps Key
+			bingmapskey : "",
 			//Modify this to point to your sharing service URL if you are using the portal
 			sharingurl: "http://www.arcgis.com/sharing/rest/content/items"
 		}
