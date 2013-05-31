@@ -120,7 +120,8 @@ define(["esri/map",
 				mapOptions: {
 					extent: getExtent(),
 					infoWindow: popup
-				}
+				},
+				bingMapsKey: configOptions.bingmapskey
 			});
 
 			mapDeferred.addCallback(function(response){
