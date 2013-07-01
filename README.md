@@ -15,7 +15,6 @@ This storytelling template enables users to place multiple webmaps into an applc
 
 1. [Install the web applciation](#install-the-web-application)
 2. [Configure the application](#configure-the-application)
-3. [Personalize the application](#personalize-the-application)
 
 #### Install the web application
 
@@ -38,18 +37,6 @@ Now let's configure the application to use a different ArcGIS Online group, titl
     - **syncMaps**: choose if multiple maps are synced across scale and location.
     - **geocoderWidget**: display a geocoder widget on the map.
 3. Save the file then test your application and note that it now displays your application and if specified your custom title and subtitle.
-
-#### Personalize the application
-
-You can personalize your site by adding a custom logo to the application's header next to the map title.
-
-1. First copy your custom logo to the images subdirectory.
-2. Open layout.css in a text editor.
-3. Find the section of code that has an id of "logo" and add the following attribute.
-
-        background:url(../images/yourImage.png) top left no-repeat;
-
-4. Run the application and the custom logo should appear to the left of the title in the application header.
 
 [New to Github? Get started here.](http://htmlpreview.github.com/?https://github.com/Esri/esri.github.com/blob/master/help/esri-getting-to-know-github.html)
 
