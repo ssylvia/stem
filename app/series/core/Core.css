@@ -70,6 +70,7 @@
 	font-size: 14px;
 	font-family: Georgia;
 	line-height: 1.4em;
+	overflow: auto;
 }
 
 .map{
