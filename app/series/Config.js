@@ -9,7 +9,19 @@ define([],
 			{
 				id: "3e823422bed64c1e8513000fa4ad0362",
 				title: ""
-			}],
+			}
+			// To add additional maps to the template, uncomment the below section for
+			// each map you would like to add
+			//, {
+			//
+			//	id: "739db23c3f674005a405c68e337f5011",
+			//	title: "testTitle"
+			//	},{
+			//
+			//	id: "739db23c3f674005a405c68e337f5011",
+			//	title: "testTitle"
+			//	}
+			],
 			//Enter a title, if no title is specified, the webmap's title is used.
 			title: "Add a title here",
 			//Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
