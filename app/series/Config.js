@@ -11,15 +11,16 @@ define([],
 				title: ""
 			}
 			// To add additional maps to the template, uncomment the below section for
-			// each map you would like to add
+			// each map you would like to add. Webmap titles from ArcGIS Online will
+			// be used unless you fill in title attribute.
 			//, {
 			//
 			//	id: "739db23c3f674005a405c68e337f5011",
-			//	title: "testTitle"
+			//	title: ""
 			//	},{
 			//
 			//	id: "739db23c3f674005a405c68e337f5011",
-			//	title: "testTitle"
+			//	title: ""
 			//	}
 			],
 			//Enter a title, if no title is specified, the webmap's title is used.
