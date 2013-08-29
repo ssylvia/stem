@@ -4,7 +4,6 @@
     font-family: 'Average-Regular';
     src: url('fonts/average-regular-webfont.eot');
     src: url('fonts/average-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/average-regular-webfont.woff') format('woff'),
          url('fonts/average-regular-webfont.ttf') format('truetype'),
          url('fonts/average-regular-webfont.svg#averageregular') format('svg');
     font-weight: normal;
