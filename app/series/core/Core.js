@@ -58,7 +58,7 @@ define(["esri/map",
 			var urlObject = esri.urlToObject(document.location.href);
 			urlObject.query = urlObject.query || {};
 
-			if (urlObject.query.embed || urlObject.query.embed === "" && $("#application-window").width > 780) {
+			if ($("#application-window").width() > 780 && urlObject.query.embed || urlObject.query.embed === "") {
 				$("#banner").hide();
 			}
 
