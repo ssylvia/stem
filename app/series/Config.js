@@ -27,6 +27,8 @@ define([],
 			title: "Add a title here",
 			//Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
 			subtitle: "Add a subtitle here",
+			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
+			startCountOnSecondTab: true,
 			//Sync maps scale and location
 			syncMaps: true,
 			//Display geocoder search widget

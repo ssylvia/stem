@@ -335,11 +335,21 @@ define(["esri/map",
 
 		function createAccordionPanel(index,response)
 		{
-			var num = index,
-				title = configOptions.webmaps[index - 1].title || response.itemInfo.item.title || "",
-				description = response.itemInfo.item.description || "";
-			$("#side-pane").append('<div class="accordion-header"><div class="accordion-header-arrow"></div><table><tr><td class="accordion-header-number">' + num + '</td><td class="accordion-header-title">' + title + '</td></tr></table></div>');
-			$("#side-pane").append('<div class="accordion-content">' + description + '</div>');
+			if(configOptions.startCountOnSecondTab){
+				var num = (index == 1 ? "" : index - 1),
+					setHeight = (index == 1 ? " style='min-height:72px'" : "")
+					title = configOptions.webmaps[index - 1].title || response.itemInfo.item.title || "",
+					description = response.itemInfo.item.description || "";
+				$("#side-pane").append('<div class="accordion-header"><div class="accordion-header-arrow"></div><table' + setHeight + '><tr><td class="accordion-header-number">' + num + '</td><td class="accordion-header-title">' + title + '</td></tr></table></div>');
+				$("#side-pane").append('<div class="accordion-content">' + description + '</div>');
+			}
+			else{
+				var num = index,
+					title = configOptions.webmaps[index - 1].title || response.itemInfo.item.title || "",
+					description = response.itemInfo.item.description || "";
+				$("#side-pane").append('<div class="accordion-header"><div class="accordion-header-arrow"></div><table><tr><td class="accordion-header-number">' + num + '</td><td class="accordion-header-title">' + title + '</td></tr></table></div>');
+				$("#side-pane").append('<div class="accordion-content">' + description + '</div>');
+			}
 
 			$(".accordion-header").last().click(function(){
 				changeSelection(index - 1);
