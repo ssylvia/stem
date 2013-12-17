@@ -101,6 +101,11 @@ define(["esri/map",
 			$("#title").html(configOptions.title);
 			$("#subtitle").html(configOptions.subtitle);
 
+			if (configOptions.webmaps.length < 2){
+				$("#mobile-navigation").hide();
+				Helper.resetLayout();
+			}
+
 			//First layout setup called on app load
 			Helper.resetLayout();
 			responsiveLayout();
@@ -133,6 +138,7 @@ define(["esri/map",
 				}
 
 				app.maps.push(map);
+				updateMobileNavigation();
 
 				var layers = esri.arcgis.utils.getLegendLayers(response);
 
@@ -246,6 +252,10 @@ define(["esri/map",
 			//Show Map
 			selectMap(0,400);
 
+			$("#mobile-navigation").click(function(){
+				changeSelection($(this).attr("map-link"));
+			});
+
 			//Hide loader
 			$(".loader").fadeOut();
 
@@ -311,6 +321,7 @@ define(["esri/map",
 			var speed = 400;
 
 			app.currentMap = app.maps[index];
+			updateMobileNavigation();
 
 			$("#mobile-header").html(app.currentMap.itemData.title);
 
@@ -403,6 +414,18 @@ define(["esri/map",
 				$("#header-text").addClass("region-center").show();
 				$("#content").prepend($("#side-pane"));
 				$("#side-pane").show();
+			}
+		}
+
+		function updateMobileNavigation()
+		{
+			if ($.inArray(app.currentMap,app.maps) < app.maps.length - 1){
+				$("#mobile-navigation-content").html("Next map: " + app.maps[$.inArray(app.currentMap,app.maps) + 1].itemData.title);
+				$("#mobile-navigation").attr("map-link",$.inArray(app.currentMap,app.maps) + 1);
+			}
+			else{
+				$("#mobile-navigation-content").html("Back to first map");
+				$("#mobile-navigation").attr("map-link",0);
 			}
 		}
 
