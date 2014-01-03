@@ -199,6 +199,14 @@ li{
 	display: block;
 }
 
+.esriTimeSlider{
+	display: none;
+}
+
+.esriTimeSlider:first-child{
+	display: block;
+}
+
 /* Popup modifications */
 
 .esriViewPopup .gallery{

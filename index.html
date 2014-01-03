@@ -47,6 +47,7 @@
 		<![endif]-->
 
 		<link rel="stylesheet" type="text/css" href="app/utils/Helper.css">
+		<link rel="stylesheet" type="text/css" href="app/ui/TimeSlider.css">
 		<link rel="stylesheet" type="text/css" href="app/series/core/Core.css">
 
 		<script type="text/javascript">
@@ -128,22 +129,28 @@
 				<div id="side-pane" class="region-left">
 				</div><!--/side-panel-->
 
-				<div id="map-pane" class="region-center">
+				<div id="map-content" class="region-center">
 
-					<img class="loader loader80" src="resources/images/app/loader.gif" alt="Loading">
-					
-					<div id="legend-wrapper">
-						<div id="close-mobile-legend" class="mobile-close legend-toggle"><i class="icon-remove"></i></div>
-						<div id="legend-toggle" class="legend-toggle">LEGEND</div>
-						<div id="legend-pane">
-						</div><!--/legend-pane-->
-					</div>
+					<div id="time-pane" class="region-top"></div>
 
-					<div id="mobile-popup">
-						<div id="close-mobile-popup" class="mobile-close mobile-popup-toggle"><i class="icon-remove"></i></div>
-					</div><!--/mobile-popup-->
+					<div id="map-pane" class="region-center">
 
-				</div><!--/map-pane-->
+						<img class="loader loader80" src="resources/images/app/loader.gif" alt="Loading">
+						
+						<div id="legend-wrapper">
+							<div id="close-mobile-legend" class="mobile-close legend-toggle"><i class="icon-remove"></i></div>
+							<div id="legend-toggle" class="legend-toggle">LEGEND</div>
+							<div id="legend-pane">
+							</div><!--/legend-pane-->
+						</div>
+
+						<div id="mobile-popup">
+							<div id="close-mobile-popup" class="mobile-close mobile-popup-toggle"><i class="icon-remove"></i></div>
+						</div><!--/mobile-popup-->
+
+					</div><!--/map-pane-->
+
+				</div><!--/map-content-->
 
 			</div><!--/content-->
 
