@@ -76,7 +76,6 @@
 #time-pane{
 	background: #888;
 	width: 100%;
-	height: 50px;
 }
 
 .map{
@@ -100,7 +99,7 @@
 
 #legend-toggle{
 	background-color: #bbb;
-	color: #000;
+	color: #fff;
 	padding: 8px 15px;
 	cursor: pointer;
 }
@@ -158,7 +157,6 @@ b{
 
 ::-webkit-scrollbar-thumb {
     background: #888;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 @media all and (min-width: 781px) {

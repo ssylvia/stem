@@ -7,12 +7,12 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-				id: "34aeb3a82e144839b24d721f25559bff",
+				id: "a63e4640f3c4499faee32811c85e82b5",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: false
+				showSingleTimeInstance: true
 			},{
-				id: "a63e4640f3c4499faee32811c85e82b5",
+				id: "34aeb3a82e144839b24d721f25559bff",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: true
