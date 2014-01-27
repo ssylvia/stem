@@ -8,6 +8,7 @@
 
 .tsTmp{
 	width: auto;
+	vertical-align: middle;
 }
 
 .esriTimeSlider .dijitButton span{
@@ -86,8 +87,8 @@
 	border-bottom-left-radius: 4px;
 }
 
-.esriTimeSlider td[width="30"]{
-	width: auto;
+.esriTimeSlider .fixed-width{
+	width: 63px;
 }
 
 .play-time{

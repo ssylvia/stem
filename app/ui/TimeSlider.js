@@ -1,4 +1,4 @@
-define(["dojo/dom","dojo/date/locale","esri/dijit/TimeSlider","storymaps/utils/Helper"], function(dom,locale,Slider,Helper){
+define(["dojo/dom","dojo/on","dojo/date/locale","esri/dijit/TimeSlider","storymaps/utils/Helper"], function(dom,on,locale,Slider,Helper){
 	/**
 	 * Time Slider
 	 * @class Time Slider
@@ -58,33 +58,36 @@ define(["dojo/dom","dojo/date/locale","esri/dijit/TimeSlider","storymaps/utils/H
 		var rewind = $('<div class="rewind-time"><div class="rewind-arrow"></div><div class="rewind-block"></div></div>');
 		var fastForward = $('<div class="fastForward-time"><div class="fastForward-arrow"></div><div class="fastForward-block"></div></div>');
 		var timeDisplay = $('<h6 class="time-display"></h6>');
-		$("#" + selector + ".esriTimeSlider td[align=right]").empty().append(playButton);
-		$("#" + selector + ".esriTimeSlider td[width=30]").empty().append(rewind);
-		$("#" + selector + ".esriTimeSlider td:last").empty().append(fastForward);
+		$("#" + selector + ".esriTimeSlider td[align=right]").addClass("fixed-width").empty().append(playButton);
+		$("#" + selector + ".esriTimeSlider td[width=30]").addClass("fixed-width").empty().append(rewind);
+		$("#" + selector + ".esriTimeSlider td:last").addClass("fixed-width").empty().append(fastForward);
 		$("#" + selector + ".esriTimeSlider .tsTmp").append(timeDisplay);
 
 		timeDisplay.html(getTimeString(slider.getCurrentTimeExtent()));
 
+		$("#time-pane").css({
+			"height": 78
+		});
 		Helper.resetLayout();
 		map.resize();
 		map.reposition();
 
 		playButton.click(function(){
 			if ($(this).hasClass("paused")){
-				$(this).removeClass("paused");
-				slider.paused();
+				stopAnimation();
 			}
 			else{
-				$(this).addClass("paused");
-				slider.play();
+				playAnimation();
 			}
 		});
 
 		rewind.click(function(){
+			stopAnimation();
 			slider.previous();
 		});
 
 		fastForward.click(function(){
+			stopAnimation();
 			slider.next();
 		});
 
@@ -92,8 +95,42 @@ define(["dojo/dom","dojo/date/locale","esri/dijit/TimeSlider","storymaps/utils/H
 
 		slider.on('time-extent-change',function(timeExtent){
 			timeDisplay.html(getTimeString(timeExtent));
+			window.test = slider;
+			setTimeout(function(){
+				if (!slider.loop){
+					if (slider.thumbCount === 1 && slider.thumbIndexes[0] === slider.timeStops.length - 1){
+						stopAnimation();
+					}
+					else if (slider.thumbCount === 2 && slider.thumbIndexes[1] === slider.timeStops.length - 1){
+						stopAnimation();
+					}
+				}
+			},100);
+			slider.pause();
+			on.once("update-end",function(){
+				if(playButton.hasClass("paused")){
+					slider.play();
+				}
+			});
 		});
 
+		function stopAnimation()
+		{
+			playButton.removeClass("paused");
+			slider.pause();
+		}
+
+		function playAnimation()
+		{
+			if (slider.thumbCount === 1 && slider.thumbIndexes[0] === slider.timeStops.length - 1){
+				slider.setThumbIndexes([0, 1]);
+			}
+			else if (slider.thumbCount === 2 && slider.thumbIndexes[1] === slider.timeStops.length - 1){
+				slider.setThumbIndexes([0, 1]);
+			}
+			playButton.addClass("paused");
+			slider.play();
+		}
 
 		function getTimeString(timeExtent)
 		{

@@ -257,7 +257,7 @@ define(["esri/map",
 		function appReady()
 		{
 			//Show Map
-			selectMap(0,400);
+			changeSelection(0)
 
 			$("#mobile-navigation").click(function(){
 				changeSelection($(this).attr("map-link"));
@@ -341,7 +341,7 @@ define(["esri/map",
 			$(".legend").hide();
 			$(".legend").eq(index).show();
 			$(".esriTimeSlider").hide();
-			$(".esriTimeSlider").eq(index).show();
+			$("#slider" + index).show();
 		}
 
 		function selectMap(mapIndex,speed)

@@ -15,13 +15,13 @@ define([],
 				id: "34aeb3a82e144839b24d721f25559bff",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: true
+				showSingleTimeInstance: false
 			},
 			{
 				id: "e226760a7e6741c9b2f21ab9308b7286",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: true
+				showSingleTimeInstance: false
 			}
 			// To add additional maps to the template, uncomment the below section for
 			// each map you would like to add. Webmap titles from ArcGIS Online will
@@ -31,18 +31,18 @@ define([],
 			//	id: "739db23c3f674005a405c68e337f5011",
 			//	title: "",
 			//	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-			//	showSingleTimeInstance: true
+			//	showSingleTimeInstance: false
 			//	},{
 			//
 			//	id: "739db23c3f674005a405c68e337f5011",
 			//	title: "",
 			//	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-			//	showSingleTimeInstance: true
+			//	showSingleTimeInstance: false
 			//	}
 			],
-			//Enter a title, if no title is specified, the webmap's title is used.
+			//Enter a title, if no title is specified, the first webmap's title is used.
 			title: "Add a title here",
-			//Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
+			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
 			subtitle: "Add a subtitle here",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
 			startCountOnSecondTab: false,
