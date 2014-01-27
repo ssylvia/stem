@@ -4,6 +4,7 @@
 
 #time-pane table{	
 	border-spacing: 0;
+	z-index: 5;
 }
 
 .tsTmp{

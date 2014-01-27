@@ -199,11 +199,7 @@ b{
 	.accordion-header-title{
 		font-size: 15px;
 	}
-
-	#map-pane{
-		position: absolute;
-	}
-
+	
 	.esriPopup{
 		display: none;
 	}

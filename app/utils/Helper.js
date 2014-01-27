@@ -17,6 +17,9 @@ define(["dojo/cookie", "dojo/has","dojo/_base/array"], function(cookie, has, arr
 					b = $(this).siblings(".region-bottom:visible").outerHeight(),
 					x = l + r,
 					y = t + b;
+					if ($("#application-window").width() <= 780 && $(this).attr("id") === "content"){
+						y = y - $("#header-text").outerHeight() - 25;
+					}
 				$(this).css({
 					"height" : $(this).parent().outerHeight() - y,
 					"width" : $(this).parent().outerWidth() - x
