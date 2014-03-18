@@ -10,18 +10,30 @@ define([],
 				id: "04744b7ad124458489ea821da3129352",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: false
+				showSingleTimeInstance: false,
+				// Hide legend and legend toggle for specific map by setting this option to false
+				legendVisible: true,
+				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+				openLegendOnChange: false
 			},{
 				id: "d0f1c5ae11d24c778d597f8bbddcf85f",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: false
+				showSingleTimeInstance: false,
+				// Hide legend and legend toggle for specific map by setting this option to false
+				legendVisible: true,
+				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+				openLegendOnChange: false
 			},
 			{
 				id: "bb5a3da962ac4040b2f52f5869fddbd8",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: false
+				showSingleTimeInstance: false,
+				// Hide legend and legend toggle for specific map by setting this option to false
+				legendVisible: true,
+				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+				openLegendOnChange: false
 			}
 			// To add additional maps to the template, uncomment the below section for
 			// each map you would like to add. Webmap titles from ArcGIS Online will
@@ -31,13 +43,21 @@ define([],
 			//	id: "739db23c3f674005a405c68e337f5011",
 			//	title: "",
 			//	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-			//	showSingleTimeInstance: false
+			//	showSingleTimeInstance: false,
+			//  // Hide legend and legend toggle for specific map by setting this option to false
+			//	legendVisible: true,
+			//  // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+			//	openLegendOnChange: false
 			//	},{
 			//
 			//	id: "739db23c3f674005a405c68e337f5011",
 			//	title: "",
 			//	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-			//	showSingleTimeInstance: false
+			//	showSingleTimeInstance: false,
+			//  // Hide legend and legend toggle for specific map by setting this option to false
+			//	legendVisible: true,
+			//  // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+			//	openLegendOnChange: false
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.

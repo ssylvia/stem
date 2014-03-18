@@ -144,6 +144,9 @@ define(["esri/map",
 					new TimeSlider("slider" + app.maps.length, map, response.itemInfo.itemData.widgets.timeSlider.properties,configOptions.webmaps[app.maps.length].showSingleTimeInstance);
 				}
 
+				map.legendVisible = configOptions.webmaps[app.maps.length].legendVisible;
+				map.openLegendOnChange = configOptions.webmaps[app.maps.length].openLegendOnChange;
+
 				app.maps.push(map);
 				updateMobileNavigation();
 
@@ -284,10 +287,11 @@ define(["esri/map",
 			$(".legend-toggle").click(function(){
 				hidePopups();
 				if(Has("ie") <= 8){
-					$("#legend-pane").toggle();
+					$("#legend-pane").toggle(400,setLegendToggle());
 				}
 				else{
 					$("#legend-pane").stop(true,true).slideToggle(400,function(){
+						setLegendToggle();
 						if($("#application-window").width() <= 780){
 							if($("#legend-pane").is(":visible")){
 								$("#close-mobile-legend").show();
@@ -316,6 +320,16 @@ define(["esri/map",
 			});
 		}
 
+		function setLegendToggle()
+		{
+			if($("#legend-pane").is(":visible")){
+				$("#legend-toggle").html("LEGEND &#9650;");
+			}
+			else{
+				$("#legend-toggle").html("LEGEND &#9660;");
+			}
+		}
+
 		function hidePopups()
 		{
 			dojo.forEach(app.maps,function(map){
@@ -338,6 +352,19 @@ define(["esri/map",
 				selectMap(index,speed);
 			}
 
+			if(app.currentMap.legendVisible){
+				$("#legend-wrapper").show();
+			}
+			else{
+				$("#legend-wrapper").hide();
+			}
+			if(app.currentMap.openLegendOnChange){
+				$("#legend-pane").slideDown({
+					complete: function(){
+						setLegendToggle();
+					}
+				});
+			}
 			$(".legend").hide();
 			$(".legend").eq(index).show();
 			$(".esriTimeSlider").hide();
