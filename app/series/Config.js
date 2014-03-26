@@ -7,7 +7,7 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-				id: "04744b7ad124458489ea821da3129352",
+				id: "3e823422bed64c1e8513000fa4ad0362",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
@@ -16,7 +16,7 @@ define([],
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
 			},{
-				id: "d0f1c5ae11d24c778d597f8bbddcf85f",
+				id: "739db23c3f674005a405c68e337f5011",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
@@ -26,7 +26,7 @@ define([],
 				openLegendOnChange: false
 			},
 			{
-				id: "bb5a3da962ac4040b2f52f5869fddbd8",
+				id: "8048e290f7e042cca505cb0f071eb009",
 				title: "",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
@@ -61,9 +61,9 @@ define([],
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.
-			title: "Add a title here",
+			title: "Where Are the Centers for Education Innovation?",
 			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
-			subtitle: "Add a subtitle here",
+			subtitle: "Look at a state-by-state comparison of where STEM and charter schools can be found around the country",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
 			startCountOnSecondTab: false,
 			//Sync maps scale and location
